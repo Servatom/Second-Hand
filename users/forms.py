@@ -10,7 +10,7 @@ class UserRegistrationForm(UserCreationForm):
     phone = forms.IntegerField()
     class Meta:
         model = User
-        fields = ['username', 'email', 'phone', 'password1', 'password2']
+        fields = ['username', 'phone', 'email', 'password1', 'password2']
 
     def save(self, *args, **kwargs):
         super(UserRegistrationForm, self).save(*args, **kwargs)
