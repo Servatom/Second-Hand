@@ -5,3 +5,6 @@ def index(request):
 
 def about(request):
     return render(request, 'ads/about.html')
+
+def ads(request):
+    return render(request, 'ads/ads.html')
