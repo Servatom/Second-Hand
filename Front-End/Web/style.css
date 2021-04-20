@@ -1,13 +1,16 @@
 html
 {
     scroll-behavior: smooth;
+    
 }
 
 body
 {
     max-width: 100vw;
+    height: 100vh;
     margin:0;
     background-image: url(../images/bgimg.jpeg);
+    backdrop-filter: blur(2px);
     background-attachment: fixed;
     background-repeat: no-repeat;
     
