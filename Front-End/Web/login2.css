@@ -45,6 +45,12 @@ h2
     font-weight: 900;
 }
 
+/* .input-group span
+{
+    background-color: rgb(78, 77, 77);
+    color: white;
+} */
+
 label{
     font-size: 1.3em;
 }
