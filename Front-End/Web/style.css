@@ -41,6 +41,7 @@ nav{
     font-weight: 500;
 }
 
+
 .container
 {
     text-align: center;
@@ -49,6 +50,7 @@ nav{
 {
     margin-top: 14vh;
     margin-bottom: 14vh;
+    backface-visibility: hidden;
 }
 .title .logo
 {
@@ -62,7 +64,7 @@ nav{
 
 .hidden
 {
-    transition: 1s;
+    
     display: none;
     
 }
