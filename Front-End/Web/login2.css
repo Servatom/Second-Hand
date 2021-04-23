@@ -109,10 +109,12 @@ button
 .btn
 {
     border: none;
+    width: 100%;
+    background-color: #ffab73;
 }
 .btn:hover
 {
-    background-color: rgb(145, 182, 182);
+    background-color: #fa8f47;
     border: none;
 }
 
