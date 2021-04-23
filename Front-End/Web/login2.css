@@ -96,7 +96,7 @@ span.input-group-text
     font-weight: 500;
 }
 
-button
+button, a.btn
 {
     margin: 10px 0;
     
