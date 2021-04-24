@@ -17,3 +17,22 @@ h1
     width: 220px;
 }
 
+p
+{
+    margin: 60px auto;
+    animation: fadein 4s;
+   font-size: 1.1em;
+}
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
