@@ -71,17 +71,7 @@ a.dropdown-item
     padding: 10px;
 }
 
-.no-auth .dropdown-menu
-{
-    text-align: center;
-    
-}
-.no-auth .dropdown-item
-{
-    margin: 10px auto;
-    font-weight: bold;
 
-}
 .dropdown
 {
     font-family: 'Poppins', sans-serif;
