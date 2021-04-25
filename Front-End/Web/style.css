@@ -59,6 +59,24 @@ nav{
 {
     width: 15%;
     /* display: block; */
+    
+}
+
+.logo{
+    animation: fadein 2s;
+    
+}
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
 }
 .tagline
 {
@@ -84,6 +102,7 @@ nav{
     margin: 30px auto;
     width: 30%;
     min-width: 207px;
+    font-weight: 500;
 }
 .btn-outline-dark
 {
@@ -93,5 +112,6 @@ nav{
 .buttons
 {
     margin: 30px auto;
+    
 }
 

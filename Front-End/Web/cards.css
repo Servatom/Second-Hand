@@ -23,7 +23,7 @@ nav{
 }
 
 .navbar{
-    position: fixed;
+    /* position: fixed; */
     z-index: 1;
   top: 0;
   width: 100%;
@@ -50,7 +50,7 @@ nav{
     
     width: 100vw;
     text-align: center;
-    padding: 2em auto;
+    padding: 0.5em auto;
     border-bottom: 1px dashed rgb(170, 170, 170);
 }
 
@@ -62,8 +62,8 @@ nav{
     background-color: rgb(242, 242, 242);
     /* box-shadow: 10px 10px 100px  rgb(197, 192, 192); */
     height: 50px;
-    margin: 30px auto;
-    margin-top: 90px;
+    margin: 20px auto;
+    /* margin-top: 80px; */
     outline: none;
     border-top-left-radius:25px ;
     border-bottom-left-radius: 25px;
@@ -112,7 +112,7 @@ nav{
 
 .sidepanel
 {
-    width: 20vw;
+    width: 15vw;
     height: 80vh;
     padding: 30px 30px;
     background-color: #dbdbdb;
@@ -123,33 +123,72 @@ nav{
 
 .products
 {
-    width: 80vw;
+    width: 85vw;
     height: 80vh;
     padding: 20px 30px;
     display: inline-block;
     background-color: rgb(242, 242, 242);
     overflow-y: scroll;
+    align-items: center;
 }
 .row
 {
     margin: 0;
 }
 
+
 .card img
 {
     margin: 20px auto;
-    height: 30vh;
+    height: 20vh;
+    
     
 }
 .card
 {
     margin: 40px 0px;
+    padding: 0px 15px;
     
+}
+.card-title
+{
+    font-size: 1.2em;
+}
+
+.card-text
+{
+    font-size: 0.8em;
 }
 .card button
 {
     width: 100%;
-    position: relative;
-    top: 0%;
+    border: none;
+    background-color: #fa8f47;
+    outline: none;
 }
 
+
+.card-footer
+{
+    padding: 10px 5px 25px;
+    background-color: transparent;
+    position: relative;
+    bottom: 0px;
+}
+
+
+
+
+@media (max-width:880px) {
+
+    .sidepanel
+    {
+        display: none;
+    }
+
+    .products{
+        width: 100vw;
+    }
+    
+    
+}
