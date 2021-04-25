@@ -28,6 +28,7 @@ nav{
   top: 0;
   width: 100%;
   background-color: transparent;
+  padding-right: 30px;
 }
 
 .navbar-brand
@@ -43,6 +44,50 @@ nav{
 {
     margin: auto 1vw;
     font-weight: 500;
+}
+
+a.dropdown-toggle
+{
+    margin: 0;
+}
+div.dropdown-menu.show
+{
+    padding:10px;
+    width: 200%;
+}
+.profileinfo
+{
+    text-align: center;
+    padding: 0;
+    border-bottom: 1px solid grey;
+}
+
+.profileinfo .username
+{
+    margin: 10px auto;
+}
+a.dropdown-item
+{
+    padding: 10px;
+}
+.dropdown-toggle
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+}
+
+.dropdown
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color:rgb(104, 104, 104);
+}
+.no-auth a
+{
+    margin: 0;
+    padding: 6px 12px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
 }
 
 .searchbox
