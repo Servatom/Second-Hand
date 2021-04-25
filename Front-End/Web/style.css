@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
 html
 {
     scroll-behavior: smooth;
@@ -43,7 +46,48 @@ nav{
     margin: auto 1vw;
     font-weight: 500;
 }
+a.dropdown-toggle
+{
+    margin: 20px 0;
+}
+div.dropdown-menu.show
+{
+    padding:10px;
+    width: 100%;
+}
+.profileinfo
+{
+    text-align: center;
+    padding: 0;
+    border-bottom: 1px solid grey;
+}
 
+.profileinfo .username
+{
+    margin: 10px auto;
+}
+a.dropdown-item
+{
+    padding: 10px;
+}
+
+.no-auth .dropdown-menu
+{
+    text-align: center;
+    
+}
+.no-auth .dropdown-item
+{
+    margin: 10px auto;
+    font-weight: bold;
+
+}
+.dropdown
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color:rgb(104, 104, 104);
+}
 
 .container
 {

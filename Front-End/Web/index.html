@@ -35,8 +35,34 @@
             <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Explore</a>
             </li> -->
-            <li class="nav-item">
-                <a class="nav-link" href="login2.html">Login</a>
+            <li class="nav-item no-auth">
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Log in
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                      <a class="dropdown-item " href="login2.html">Log in</a>
+                      <a class="dropdown-item " href="register.html">Sign up</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item auth">
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account
+                    </a>
+                  
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-item profileinfo">
+                            <img src="/Front-End/images/default-avatar.png" class="profilepic" height="46px" alt="profile picture">
+                            <h5 class="username">@Username</h5>
+                        </div>
+                      <a class="dropdown-item" href="#">Profile</a>
+                      <a class="dropdown-item" href="#">Your ads</a>
+                      <a class="dropdown-item" href="#">Log out</a>
+                    </div>
+                  </div>
             </li>
         </ul>
      </div>
