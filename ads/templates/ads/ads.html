@@ -26,17 +26,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="index.html" onclick=showHome()>Home</a>
+                <a class="nav-link" href="{% url 'ads-index' %}" onclick=showHome()>Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html#" onclick=showAbout()>About</a>
+                <a class="nav-link" href="{% url 'ads-index' %}" onclick=showAbout()>About</a>
             </li>
             <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Explore</a>
             </li> -->
             <li class="nav-item no-auth">
-                <a class="nav-link btn btn-secondary" href="login2.html" style="color: white;">Log in</a>
+                {% if user.is_authenticated %}
+                <a class="nav-link btn btn-secondary" href="{% url 'login' %}" style="color: white;">Log out</a>
+                {% else %}
+                <a class="nav-link btn btn-secondary" href="{% url 'login' %}" style="color: white;">Log in</a>
+                {% endif %}
             </li>
+            {% if user.is_authenticated %}
             <li class="nav-item auth">
                 <div class="dropdown">
                     <a class="btn btn-secondary dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -54,6 +59,7 @@
                     </div>
                   </div>
             </li>
+            {% endif %}
         </ul>
      </div>
     </nav>
@@ -66,21 +72,23 @@
     </div>
     <div class="products">
         <div class="row">
-            
+            {% for post in posts %}
                 <!-- Code for a single card starts -->
                 <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
                     <div class="card ">
-                        <img src="{% static 'ads/images/mattress.jpg' %}" class="card-img-top" alt="...">
+                        <img src="{{ post.image.url }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            <h5 class="card-title">{{ post.title }}</h5>
+                            <p class="card-text">{{ post.description }} </p>
+                            <p class="card-text"><small class="text-muted">Posted on {{ post.date_posted|date:"F d, Y" }} </small></p>
+                            <p class="card-text"><small class="text-muted">Posted by {{ post.author }}</small></p>
                         </div>
                         <div class="card-footer">
                             <button class="btn btn-dark "> Interested</button>
                         </div>
                     </div>
                 </div>
+            {% endfor %}
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
