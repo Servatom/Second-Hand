@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+html
+{
+    scroll-behavior: smooth;
+    
+}
+
+body
+{
+    max-width: 100vw;
+    height: 100vh;
+    margin:0;
+    background-color: white;
+    backdrop-filter: blur(2px);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+}
+
+nav{
+    font-size: 1.2em;
+    position: fixed;
+}
+
+.navbar{
+    /* position: fixed; */
+    z-index: 1;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  padding-right: 30px;
+}
+
+.navbar-brand
+{
+    
+    font-family: 'Ubuntu', sans-serif;
+
+    font-weight: bold;
+    font-size: 1.3em;                                            
+}
+
+.nav-item
+{
+    margin: auto 1vw;
+    font-weight: 500;
+}
+
+a.dropdown-toggle
+{
+    margin: 0;
+}
+div.dropdown-menu.show
+{
+    padding:10px;
+    width: 200%;
+}
+.profileinfo
+{
+    text-align: center;
+    padding: 0;
+    border-bottom: 1px solid grey;
+}
+
+.profileinfo .username
+{
+    margin: 10px auto;
+}
+a.dropdown-item
+{
+    padding: 10px;
+}
+.dropdown-toggle
+{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+}
+
+.dropdown
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color:rgb(104, 104, 104);
+}
+.no-auth a
+{
+    margin: 0;
+    padding: 6px 12px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1em;
+}
+
+.searchbox
+{
+    
+    width: 100vw;
+    text-align: center;
+    padding: 0.5em auto;
+    border-bottom: 1px dashed rgb(170, 170, 170);
+}
+
+.searchbox input
+{
+    width: 50%;
+    min-width: 235px;
+    border: none;
+    background-color: rgb(242, 242, 242);
+    /* box-shadow: 10px 10px 100px  rgb(197, 192, 192); */
+    height: 50px;
+    margin: 20px auto;
+    /* margin-top: 80px; */
+    outline: none;
+    border-top-left-radius:25px ;
+    border-bottom-left-radius: 25px;
+    font-size: 1.2em;
+    padding: 1% 20px;
+    -webkit-appearance: none;
+    color:rgb(130, 130, 130);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+
+.searchbox input::placeholder
+{
+    color:rgb(174, 174, 174);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.searchbtn
+{
+    border: none;
+    background-color: rgb(242, 242, 242);
+    height: 50px;
+    -webkit-appearance: none;
+    outline: none;
+    border-top-right-radius:25px ;
+    border-bottom-right-radius: 25px;
+    font-size: 1.2em;
+    padding: 1% 20px;
+    color:rgb(130, 130, 130);
+    color: #ffab73;
+    position: relative;
+    top: 1px;
+    margin: 0;
+
+}
+.searchbtn:focus
+{
+    outline: none;
+    
+}
+.searchbtn:hover
+{
+    color: #fa8f47;
+}
+
+.sidepanel
+{
+    width: 15vw;
+    height: 80vh;
+    padding: 30px 30px;
+    background-color: #dbdbdb;
+    /* border-right:1px dashed rgb(170, 170, 170);  */
+    /* display: inline-block; */
+    float: left;
+}
+
+.products
+{
+    width: 85vw;
+    height: 80vh;
+    padding: 20px 30px;
+    display: inline-block;
+    background-color: rgb(242, 242, 242);
+    overflow-y: scroll;
+    align-items: center;
+}
+.row
+{
+    margin: 0;
+}
+
+
+.card img
+{
+    margin: 20px auto;
+    height: 20vh;
+    
+    
+}
+.card
+{
+    margin: 40px 0px;
+    padding: 0px 15px;
+    
+}
+.card-title
+{
+    font-size: 1.2em;
+}
+
+.card-text
+{
+    font-size: 0.8em;
+}
+.card button
+{
+    width: 100%;
+    border: none;
+    background-color: #fa8f47;
+    outline: none;
+}
+
+
+.card-footer
+{
+    padding: 10px 5px 25px;
+    background-color: transparent;
+    position: relative;
+    bottom: 0px;
+}
+
+
+
+
+@media (max-width:880px) {
+
+    .sidepanel
+    {
+        display: none;
+    }
+
+    .products{
+        width: 100vw;
+    }
+    
+    
+}
