@@ -1,1 +1,91 @@
-The ADs cards go here!
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore - Second</title>
+    <link rel="icon" href="{% static 'ads/images/handshake_logo.svg' %}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gotham-fonts@1.0.3/css/gotham-rounded.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/144ce35d48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'ads/css/cards.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <img src="{% static 'ads/images/handshake_logo.svg' %}" alt="logo" height="30vh" style="margin-right: 0.6vw; margin-left: 1.2vw;">
+        <a class="navbar-brand" href=""> Second Hand</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html" onclick=showHome()>Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#" onclick=showAbout()>About</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="#">Explore</a>
+            </li> -->
+            <li class="nav-item no-auth">
+                <a class="nav-link btn btn-secondary" href="login2.html" style="color: white;">Log in</a>
+            </li>
+            <li class="nav-item auth">
+                <div class="dropdown">
+                    <a class="btn btn-secondary dropdown-toggle " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account
+                    </a>
+                  
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+                        <div class="dropdown-item profileinfo">
+                            <img src="{% static 'ads/images/default-avatar.png' %}" class="profilepic" height="46px" alt="profile picture">
+                            <h5 class="username">@Username</h5>
+                        </div>
+                      <a class="dropdown-item" href="#">Profile</a>
+                      <a class="dropdown-item" href="#">Your ads</a>
+                      <a class="dropdown-item" href="#">Log out</a>
+                    </div>
+                  </div>
+            </li>
+        </ul>
+     </div>
+    </nav>
+
+    <div class="searchbox">
+        <input type="text" placeholder="Search . . ."><button type="submit" class="fas fa-search searchbtn"></button>
+    </div>
+    <div class="sidepanel">
+        <h5>Filter</h5>
+    </div>
+    <div class="products">
+        <div class="row">
+            
+                <!-- Code for a single card starts -->
+                <div class="col-sm-6 col-md-4 col-lg-3 d-flex">
+                    <div class="card ">
+                        <img src="{% static 'ads/images/mattress.jpg' %}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-dark "> Interested</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+</body>
+</html>
