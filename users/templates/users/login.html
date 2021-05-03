@@ -22,7 +22,7 @@
 			{% csrf_token %}
 
 			<div class="form-group">
-				<label for="exampleInputName1">Name</label>
+				<label for="exampleInputName1">Email Address </label>
 				<input type="text" class="form-control" id="registerName" placeholder="Enter your name" name="username" {% if form.is_bound %} value="{{ form.username.value }}" {% endif %}> 
 				
 			</div>
