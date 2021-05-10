@@ -3,6 +3,8 @@ from .views import (
     PostListView,
     PostCreateView,
     PostDetailView,
+    PostUpdateView,
+    PostDeleteView,
     )
 from . import views
 
@@ -11,4 +13,6 @@ urlpatterns = [
     path('ads/', PostListView.as_view(), name='ads-list'),
     path('ads/new/', PostCreateView.as_view(), name='ads-create'),
     path('ads/<int:pk>', PostDetailView.as_view(), name='ads-detail'),
+    path('ads/<int:pk>/update/', PostUpdateView.as_view(), name='ads-update'),
+    path('ads/<int:pk>/delete/', PostDeleteView.as_view(), name='ads-delete'),
 ]
