@@ -1,3 +1,4 @@
+from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.db.models import Q
 from django.shortcuts import render
@@ -10,6 +11,7 @@ from django.views.generic import (
     DeleteView,
     )
 from .models import Post
+from users.models import CustomUser
 
 
 class PostListView(ListView):
@@ -65,6 +67,20 @@ class PostSearchView(ListView):
         query = self.request.GET.get('q')
         ad_list = Post.objects.filter(Q(title__icontains=query))
         return ad_list
+
+class UserAdList(LoginRequiredMixin,UserPassesTestMixin,ListView):
+    model = Post
+    template_name = 'ads/user_ads.html'
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        user = get_object_or_404(CustomUser, email=self.kwargs.get('email'))
+        return Post.objects.filter(author=user).order_by('-date_posted')
+
+    def test_func(self):
+        if self.request.user == self.kwargs.get('email'):
+            return True
+        return False
 
 def index(request):
     return render(request, 'ads/index.html')
