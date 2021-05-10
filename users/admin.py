@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
+from .models import Profile
 from .models import CustomUser as Users
 
 class CustomUserAdmin(UserAdmin):
@@ -21,3 +22,4 @@ class CustomUserAdmin(UserAdmin):
     ordering = ('email',)
 
 admin.site.register(Users, CustomUserAdmin)
+admin.site.register(Profile)

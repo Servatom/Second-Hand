@@ -6,6 +6,7 @@ from .views import (
     PostUpdateView,
     PostDeleteView,
     PostSearchView,
+    UserAdList
     )
 from . import views
 
@@ -16,5 +17,6 @@ urlpatterns = [
     path('ads/<int:pk>', PostDetailView.as_view(), name='ads-detail'),
     path('ads/<int:pk>/update/', PostUpdateView.as_view(), name='ads-update'),
     path('ads/<int:pk>/delete/', PostDeleteView.as_view(), name='ads-delete'),
-    path('ads/search', PostSearchView.as_view(), name='ads-search')
+    path('ads/search', PostSearchView.as_view(), name='ads-search'),
+    path('user/<str:email>', UserAdList.as_view(), name = 'user-ads'),
 ]

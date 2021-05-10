@@ -48,11 +48,11 @@
                   
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                         <div class="dropdown-item profileinfo">
-                            <img src="{% static 'ads/images/default-avatar.png' %}" class="profilepic" height="46px" alt="profile picture">
-                            <h5 class="username">@Username</h5>
+                            <img src="{{ user.profile.image.url }}" class="rounded-circle article-img" height="46px" alt="profile picture">
+                            <h5 class="username">{{ user.username }}</h5>
                         </div>
-                      <a class="dropdown-item" href="#">Profile</a>
-                      <a class="dropdown-item" href="#">Your ads</a>
+                      <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
+                      <a class="dropdown-item" href="{% url 'user-ads' user.email %}">Your ads</a>
                       <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
                     </div>
                   </div>
@@ -81,7 +81,7 @@
                             <h5 class="card-title">{{ post.title }}</h5>
                             <p class="card-text">{{ post.description }} </p>
                             <p class="card-text"><small class="text-muted">Posted on {{ post.date_posted|date:"F d, Y" }} </small></p>
-                            <p class="card-text"><small class="text-muted">Posted by {{ post.author }}</small></p>
+                            <p class="card-text"><small class="text-muted">Posted by {{ post.author.username }}</small></p>
                         </div>
                         <div class="card-footer">
                             <button class="btn btn-dark "> Interested</button>
