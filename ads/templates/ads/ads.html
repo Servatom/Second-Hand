@@ -63,7 +63,9 @@
     </nav>
 
     <div class="searchbox">
-        <input type="text" placeholder="Search . . ."><button type="submit" class="fas fa-search searchbtn"></button>
+        <form action="{% url 'ads-search' %}" method="GET">
+            <input name="q" type="text" placeholder="Search . . ."><button type="submit" class="fas fa-search searchbtn"></button>
+        </form>
     </div>
     <div class="sidepanel">
         <h5>Filter</h5>

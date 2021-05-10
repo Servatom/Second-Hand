@@ -1,4 +1,5 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.db.models import Q
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import (
@@ -55,6 +56,15 @@ class PostDeleteView(LoginRequiredMixin,UserPassesTestMixin,DeleteView):
             return True
         return False
 
+class PostSearchView(ListView):
+    model = Post
+    template_name = 'ads/ads.html'
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        ad_list = Post.objects.filter(Q(title__icontains=query))
+        return ad_list
 
 def index(request):
     return render(request, 'ads/index.html')
