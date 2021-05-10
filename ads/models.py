@@ -12,7 +12,7 @@ class Post(models.Model):
     price = models.IntegerField(blank=False)
     date_posted = models.DateTimeField(default=timezone.now)
     author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='uploads', default='')
+    image = models.ImageField(upload_to='uploads', default='lamp.JPEG')
 
     def __str__(self):
         return f"{self.title}"
@@ -25,5 +25,5 @@ class Post(models.Model):
             img.thumbnail(output_size)
             img.save(self.image.path)
 
-    # def get_absolute_url(self):
-    #     return reverse('post-detail', kwargs={'pk':self.pk})
+    def get_absolute_url(self):
+        return reverse('ads-list')
