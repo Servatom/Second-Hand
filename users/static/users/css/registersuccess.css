@@ -1,0 +1,38 @@
+
+body
+{
+    text-align: center;
+    max-height: 100vh;
+}
+.container
+{
+    margin: 20vh auto 0;
+}
+h1
+{
+    margin: 60px auto;
+}
+.success-gif
+{
+    width: 220px;
+}
+
+p
+{
+    margin: 60px auto;
+    animation: fadein 4s;
+   font-size: 1.1em;
+}
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
