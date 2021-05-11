@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile</title>
+        <link rel="icon" href="../images/logo 2(2).png">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/144ce35d48.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+        
+
+    <div class="content-section">
+        <div class="media">
+            <img class="rounded-circle account-img" src="/media/profile_pics/E720C819-05F6-41F6-905E-9403BB7076C1.PNG">
+                <div class="media-body">
+                    <h2 class="account-heading">Yashvardhan Arora</h2>
+                    <p class="text-secondary">yash@xyz.com</p>
+                    <p class="text-secondary">9625056985</p>
+                </div>
+        </div>
+        <form method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="csrfmiddlewaretoken" value="dg02hz5tm2pNUlrQAn6oSwuKhocfb3C6JdVXGPJw4LqlInCbNAL8fOn2bTVNxigj">
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Profile Info</legend>
+            <p><label for="id_username">Username:</label> <input type="text" name="username" value="Yashvardhan Arora" maxlength="100" required id="id_username"></p>
+<p><label for="id_phone">Phone:</label> <input type="number" name="phone" value="9625056985" required id="id_phone"></p>
+<p><label for="id_email">Email:</label> <input type="email" name="email" value="yash@xyz.com" maxlength="254" required id="id_email"></p>
+                                <p><label for="id_image">Image:</label> Currently: <a href="/media/profile_pics/E720C819-05F6-41F6-905E-9403BB7076C1.PNG">profile_pics/E720C819-05F6-41F6-905E-9403BB7076C1.PNG</a><br>
+Change:
+<input type="file" name="image" accept="image/*" id="id_image"></p>
+                        </fieldset>
+                        <div class="form-group">
+                                <button class="btn btn-outline-info" type="submit">Update</button>
+                        </div>
+                </form>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+
+    </body>
+
+</html>
