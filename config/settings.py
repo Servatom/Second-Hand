@@ -24,7 +24,13 @@ SECRET_KEY = 'django-insecure-ufbt(ie6b0bc3z7h@a303nyo#_bn1l3d8j*g1=j&eedm_k2op4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.4']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    '192.168.1.203',
+    'servatom.com',
+    'www.servatom.com',
+]
 
 
 # Application definition
