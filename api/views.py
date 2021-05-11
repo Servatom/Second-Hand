@@ -10,11 +10,13 @@ from rest_framework.permissions import IsAuthenticated
 from .permissions import IsAuthorOrReadOnly
 from .serializers import PostSerializer
 
+
 class PostList(ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+
 class PostDetail(RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    permission_classes = (IsAuthorOrReadOnly,)
+    permission_classes = (IsAuthorOrReadOnly, IsAuthenticated)
