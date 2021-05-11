@@ -19,6 +19,8 @@ class PostSerializer(serializers.ModelSerializer):
         fields = ['title', 'description', 'price', 'date_posted', 'author', 'image']
         read_only_fields = ['date_posted']
 
+    """ Returns the username instead of user id in 'author' field """
+
     def to_representation(self, instance):
         rep = super(PostSerializer, self).to_representation(instance)
         rep['author'] = instance.author.username
