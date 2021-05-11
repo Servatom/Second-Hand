@@ -42,8 +42,14 @@ body
 
 h2
 {
-    margin-bottom: 30px;
     font-weight: 900;
+}
+#ruler
+{
+    margin-bottom: 40px;
+    display: inline-block;
+    width: 50%;
+    border: 1px solid rgb(165, 160, 160);
 }
 
 /* .input-group span
@@ -52,13 +58,13 @@ h2
     color: white;
 } */
 
-label{
-    font-size: 1.3em;
-}
+
 
 .container.adform label
 {
-    font-size: 1.2em;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: 10px;
 }
 
 .form-check-label
@@ -72,26 +78,37 @@ label{
     border: none;
     background-color: rgb(242, 242, 242);
     /* box-shadow: 10px 10px 100px  rgb(197, 192, 192); */
-    height: 50px;
+    height: 30px;
     border-radius: 10px;
     
     
     font-size: 1.2em;
-    padding: 5% 5%;
+    padding: 4% 5%;
 }
+
+#adPrice
+{
+    padding: 4% 3%;
+}
+
 span.input-group-text
 {
     background-color: rgb(242, 242, 242);
     color:rgb(174, 174, 174);
     border: 0;
+    border-radius: 10px;
     border-right: 2px solid rgba(156, 156, 156, 0.568);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.4em;
 }
 
 .form-control::placeholder
 {
     color:rgb(174, 174, 174);
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 button, a.btn
@@ -102,13 +119,16 @@ button, a.btn
 
 .adform .btn
 {
-    margin: 20px 0 0px;
+    height: 50px;
+    margin: 40px 0 0px;
+    
 }
 .btn
 {
     border: none;
     width: 100%;
     background-color: #ffab73;
+    font-size: 1.3em;
 }
 .btn:hover
 {
@@ -116,7 +136,29 @@ button, a.btn
     border: none;
 }
 
-p a
+
+#imgLabel
 {
-    color: rgb(207, 24, 131);
+    color: white;
+    background-color: rgb(207, 24, 131);
+    padding: 2% 5%;
+    display: inline-block;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#imgLabel:hover
+{
+    background-color: #ffa264;
+    transition: 0.3s;
+}
+label i
+{
+    margin: auto 10px;
+    font-size: 1.2em;
+}
+
+img#output
+{
+    border: 4px solid rgb(199, 192, 192);
+    margin: 20px auto;
 }

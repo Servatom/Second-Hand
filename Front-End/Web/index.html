@@ -72,11 +72,20 @@
     </div>
     
     <div class="container buttons">
-        <button type="button" class="btn btn-outline-dark btn-lg" onclick="window.location.href='cards.html'">Explore</button>
-        <button type="button" class="btn btn-dark btn-lg" id="postad" onclick="window.location.href='postad.html'">Post an ad</button>
+        <button type="button" class="btn btn-outline-dark btn-lg" id="explore">Explore</button>
+        <button type="button" class="btn btn-dark btn-lg" id="postad" >Post an ad</button>
     </div>
 
-
+    <script>
+        document.querySelector(".buttons #explore").addEventListener("click",function(){
+            window.location.href='cards.html';
+        });
+        
+        
+        document.querySelector(".buttons #postad").addEventListener("click",function(){
+        window.location.href='postad.html';
+        });
+    </script>
 
 
 
