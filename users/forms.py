@@ -6,9 +6,10 @@ from .models import CustomUser, Profile
 
 MOBILE_REGEX = "^(\+\d{1,3}[- ]?)?\d{10}$"
 
+
 class UserRegistrationForm(UserCreationForm):
     phone = forms.IntegerField(
-        required=True, 
+        required=True,
         validators=[
             RegexValidator(
                 regex=MOBILE_REGEX,
@@ -17,7 +18,7 @@ class UserRegistrationForm(UserCreationForm):
             )
         ]
     )
-    
+
     class Meta:
         model = CustomUser
         fields = ['username', 'phone', 'email', 'password1', 'password2']
@@ -25,10 +26,12 @@ class UserRegistrationForm(UserCreationForm):
     def save(self, *args, **kwargs):
         super(UserRegistrationForm, self).save(*args, **kwargs)
 
+
 class UserUpdateForm(forms.ModelForm):
     class Meta:
         model = CustomUser
         fields = ['username', 'phone', 'email']
+
 
 class ProfileUpdateForm(forms.ModelForm):
     class Meta:

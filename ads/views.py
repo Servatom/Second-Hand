@@ -78,7 +78,7 @@ class UserAdList(LoginRequiredMixin,UserPassesTestMixin,ListView):
         return Post.objects.filter(author=user).order_by('-date_posted')
 
     def test_func(self):
-        if self.request.user == self.kwargs.get('email'):
+        if str(self.request.user) == self.kwargs.get('email'):
             return True
         return False
 
