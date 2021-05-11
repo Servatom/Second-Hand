@@ -37,7 +37,22 @@ body
 
 .container.adform
 {
-    padding: 5% 5% 5%;
+    padding: 3% 5% 5%;
+}
+
+.navigation i
+{
+    margin: 0px 0 30px;
+    font-size: 1.7em;
+}
+a.navigation
+{
+    text-decoration: none;
+    color: rgb(131, 130, 130);
+}
+.navigation i:hover
+{
+    color: rgb(207, 24, 131);
 }
 
 h2
