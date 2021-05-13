@@ -155,6 +155,21 @@ a.dropdown-item
     color: #fa8f47;
 }
 
+.postadbtn
+{
+    margin: 0 50px;
+    border: none;
+    transition: 0.3s;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+.postadbtn:hover
+{
+    background-color: #fa8f47;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
 .sidepanel
 {
     width: 15vw;
