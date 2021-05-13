@@ -26,7 +26,9 @@
                 {% endif %}
                 <div class="profile-section">
                 <div class="profile-head">
-                        <img src="{{ user.profile.image.url }}" alt="Profile picture" class="rounded-circle">
+                        <div class="profilePic rounded-circle">
+                                <img src="{{ user.profile.image.url }}" alt="Profile picture" class="pfp">
+                        </div>
                         <h2 class="name">{{ user.username }}</h2>
                         <h6 class="email">{{ user.email }}</h6>
                         <h6 class="phone">{{ user.phone }}</h6>
