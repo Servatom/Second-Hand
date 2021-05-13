@@ -207,9 +207,19 @@ img#output
 {
     color: white;
 }
-.profile-head img
+
+.profilePic
 {
     height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.pfp
+{
+    object-fit: cover;
+    object-position: top;
 }
 
 h2.name 
