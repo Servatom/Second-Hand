@@ -99,9 +99,16 @@ a.dropdown-item
     border-bottom: 1px dashed rgb(170, 170, 170);
 }
 
+#searchbar
+{
+    display: inline-block;
+    width: 60%;
+    min-width: 235px;
+}
+
 .searchbox input
 {
-    width: 50%;
+    width: 80%;
     min-width: 235px;
     border: none;
     background-color: rgb(242, 242, 242);
@@ -157,7 +164,7 @@ a.dropdown-item
 
 .postadbtn
 {
-    margin: 0 50px;
+    margin: 20px 20px 20px;
     border: none;
     transition: 0.3s;
     font-size: 1.1em;
@@ -251,4 +258,17 @@ a.dropdown-item
     }
     
     
+}
+
+@media (max-width:575px)
+{
+    #searchbar
+    {
+        display: block;
+        width: 100%;
+    }
+    .postadbtn
+    {
+        margin: 0px 20px 20px;
+    }
 }
