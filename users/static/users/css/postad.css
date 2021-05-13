@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body
+{
+    max-width: 100vw;
+    margin: 0 0;
+    padding: 0 auto 2%;
+    /* max-height: 100vh; */
+    background-image: url(../images/bg8.jpeg);
+    background-color: rgb(250, 250, 250);
+    background-size: cover;
+    background-attachment: fixed;
+	font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+
+}
+
+*
+{
+    max-width: 100%;
+}
+
+.container
+{
+    
+    margin: 0 auto 0;
+    width: 70%;
+    min-width: 322px;
+    padding: 5% 5%;
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-color: #fff;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0.5px 50px  rgb(214, 209, 209);
+    
+     
+}
+
+.container.adform
+{
+    padding: 3% 5% 5%;
+}
+
+.navigation i
+{
+    margin: 0px 0 30px;
+    font-size: 1.7em;
+}
+a.navigation
+{
+    text-decoration: none;
+    color: rgb(131, 130, 130);
+}
+.navigation i:hover
+{
+    color: rgb(207, 24, 131);
+}
+
+span.navigation
+{
+    margin: 0 20px;
+    font-size: 1.8em;
+    color: black;
+}
+
+h2
+{
+    font-weight: 900;
+}
+#ruler
+{
+    margin-bottom: 40px;
+    display: inline-block;
+    width: 50%;
+    border: 1px solid rgb(165, 160, 160);
+}
+
+/* .input-group span
+{
+    background-color: rgb(78, 77, 77);
+    color: white;
+} */
+
+
+
+.container.adform label
+{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.form-check-label
+{
+    font-size: 1em;
+}
+
+.form-control
+{
+    /* border: 1px solid black; */
+    border: none;
+    background-color: rgb(242, 242, 242);
+    /* box-shadow: 10px 10px 100px  rgb(197, 192, 192); */
+    height: 30px;
+    border-radius: 10px;
+    
+    
+    font-size: 1.2em;
+    padding: 4% 5%;
+}
+
+#adPrice
+{
+    padding: 4% 3%;
+}
+
+span.input-group-text
+{
+    background-color: rgb(242, 242, 242);
+    color:rgb(174, 174, 174);
+    border: 0;
+    border-radius: 10px;
+    border-right: 2px solid rgba(156, 156, 156, 0.568);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.4em;
+}
+
+.form-control::placeholder
+{
+    color:rgb(174, 174, 174);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+button, a.btn,a
+{
+    margin: 10px 0;
+    
+}
+
+.adform .btn 
+{
+    height: 50px;
+    margin: 40px 0 0px;
+    
+}
+.btn
+{
+    border: none;
+    width: 100%;
+    background-color: #ffab73;
+    font-size: 1.3em;
+}
+.btn:hover
+{
+    background-color: #fa8f47;
+    border: none;
+}
+
+
+#imgLabel
+{
+    color: white;
+    background-color: rgb(207, 24, 131);
+    padding: 2% 5%;
+    display: inline-block;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#imgLabel:hover
+{
+    background-color: #ffa264;
+    transition: 0.3s;
+}
+label i
+{
+    margin: auto 10px;
+    font-size: 1.2em;
+}
+
+img#output
+{
+    border: 4px solid rgb(199, 192, 192);
+    margin: 20px auto;
+}
+
+.profile-head
+{
+    text-align: center;
+}
+.buttons
+{
+    text-align: center;
+}
+
+.profilebtn
+{
+    background-color: rgb(125, 185, 57);
+    text-decoration: none; 
+    color: white;
+    width: 40%;
+    padding: 10px; 
+}
+
+.profilebtn:hover
+{
+    color: white;
+}
+/* .profile-head img
+{
+    height: 200px;
+    border-radius: 200px;
+} */
+
+h2.name 
+{
+    margin: 30px auto 10px;
+    
+}
+h6.email, h6.phone
+{
+    opacity: 0.6;
+}
+
+.editInfo
+{
+    margin: 30px auto;
+    padding: 20px 20px;
+    border: 1px dashed black;
+}
+.editInfo #imgLabel
+{
+    padding: 1% 3%;
+}
+
+@media (min-width:1100px)
+{
+    .editInfo input 
+    {
+        display: inline;
+        width: 60%;
+        margin: 30px 20px;
+       padding: 3% 5%;
+        
+    }
+}
+@media (max-width:900px)
+{
+    .profilebtn
+{
+    background-color: rgb(125, 185, 57);
+    width: 100%;
+    margin: 40px auto;
+}
+}

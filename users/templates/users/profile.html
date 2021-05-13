@@ -6,39 +6,69 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Profile</title>
+        <link rel="icon" href=".{% static 'users/images/handshake_logo.svg' %}">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/144ce35d48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'users/css/postad.css' %}">
 </head>
 
-<body>
-        {% if messages %}
-        {% for message in messages%}
-        <div class="alert alert-{{message.tags}}">
-                {{message}}
-        </div>
-        {% endfor %}
-        {% endif %}
-
-        <div class="content-section">
-                <div class="media">
-                        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
-                        <div class="media-body">
-                                <h2 class="account-heading">{{ user.username }}</h2>
-                                <p class="text-secondary">{{ user.email }}</p>
-                                <p class="text-secondary">{{ user.phone }}</p>
+<body style="background-image: url(../images/bg4.jpeg);">
+        <div class="container adform">
+                <a href="{% url 'ads-list' %}" class="navigation"><i class="fas fa-arrow-left"></i></a><span class="navigation">Profile</span>
+                {% if messages %}
+                {% for message in messages%}
+                        <div class="alert alert-{{message.tags}}">
+                                {{message}}
                         </div>
+                {% endfor %}
+                {% endif %}
+                <div class="profile-section">
+                <div class="profile-head">
+                        <img src="{{ user.profile.image.url }}" alt="Profile picture" class="rounded-circle">
+                        <h2 class="name">{{ user.username }}</h2>
+                        <h6 class="email">{{ user.email }}</h6>
+                        <h6 class="phone">{{ user.phone }}</h6>
                 </div>
-                <form method="POST" enctype="multipart/form-data">
+                <div class="buttons">
+                        <a class="btn profilebtn" href="{% url 'user-ads' user.email %}" >Your Ads</a>
+                        <a class="btn profilebtn" href="" >Pending Approvals</a>
+                
+                </div>
+                <form method="POST" enctype="multipart/form-data" class="editInfo">
                         {% csrf_token %}
                         <fieldset class="form-group">
-                                <legend class="border-bottom mb-4">Profile Info</legend>
-                                {{ u_form.as_p }}
-                                {{ p_form.as_p }}
+                                <h3 style="text-decoration: underline; font-weight: 600;">Edit Info</h3>
+                                <label for="id_username">Name:</label> <input class="form-control" type="text" name="username" value="{{u_form.username.value}}" maxlength="100" required id="id_username">
+                                <br>
+                                <label for="id_phone">Phone:</label> <input class="form-control" type="number" name="phone" value="{{u_form.phone.value}}" required id="id_phone">
+                                <br>
+                                <label for="id_email">Email:</label> <input class="form-control" type="email" name="email" value="{{u_form.email.value}}" maxlength="254" required id="id_email">
+                                <br>
+                                <label for="id_image">Current Image:</label><a style="margin: auto 20px;" href="{{p_form.image.url}}">{{p_form.image.url}}</a>
+                                <br>
+                                <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+                                <br>
+                                <label for="file" style="cursor: pointer;" id="imgLabel">Change Profile Picture <i class="fas fa-image"></i></label>
+                                <br>
+                                <img id="output" width="200" />
                         </fieldset>
                         <div class="form-group">
-                                <button class="btn btn-outline-info" type="submit">Update</button>
+                        <button class="btn btn-sm" type="submit" style="text-decoration: none; color: white;">Update</button>
                         </div>
                 </form>
+                
+                </div>
         </div>
+    
+
+    <script>
+        var loadFile = function(event) {
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+        </script>
 </body>
 
 </html>
