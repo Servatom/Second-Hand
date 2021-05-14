@@ -61,6 +61,21 @@ div.dropdown-menu.show
     padding: 0;
     border-bottom: 1px solid grey;
 }
+.profilePic
+{
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+.pfp
+{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
 
 .profileinfo .username
 {
@@ -208,7 +223,8 @@ a.dropdown-item
 {
     margin: 20px auto;
     height: 20vh;
-    
+    object-fit: cover;
+    object-position: center;
     
 }
 .card
@@ -271,4 +287,12 @@ a.dropdown-item
     {
         margin: 0px 20px 20px;
     }
+}
+
+@media (max-width:767px)
+{
+    div.dropdown-menu.show
+{
+    width: 100%;
+}
 }
