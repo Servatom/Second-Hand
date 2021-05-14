@@ -11,10 +11,10 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/144ce35d48.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'users/css/postad.css' %}">
+    <link rel="stylesheet" href="{% static 'users/css/profile.css' %}">
 </head>
 
-<body style="background-image: url(../images/bg4.jpeg);">
+<body class="profileBody">
         <div class="container adform">
                 <a href="{% url 'ads-list' %}" class="navigation"><i class="fas fa-arrow-left"></i></a><span class="navigation">Profile</span>
                 {% if messages %}

@@ -152,6 +152,9 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
     ],
     'DEFAULT_AUTHENTICATION_CLASSES': [
+        # For browsable API
+        'rest_framework.authentication.SessionAuthentication',
+        # For httpie, curl or Postman
         'rest_framework.authentication.TokenAuthentication',
     ],
 }

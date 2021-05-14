@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/144ce35d48.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'ads/css/cards.css' %}">
+    <link rel="stylesheet" href="{% static 'ads/css/ads.css' %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -48,7 +48,9 @@
                   
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
                         <div class="dropdown-item profileinfo">
-                            <img src="{{ user.profile.image.url }}" class="rounded-circle article-img" height="46px" alt="profile picture">
+                            <div class="profilePic rounded-circle">
+                                <img src="{{ user.profile.image.url }}" class="pfp" height="46px" alt="profile picture">
+                            </div>
                             <h5 class="username">{{ user.username }}</h5>
                         </div>
                       <a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
