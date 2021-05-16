@@ -31,8 +31,8 @@ urlpatterns = [
     path('profile/', user_views.profile, name='profile'),
 
     path('api/', include('api.urls')),
-    path('api-auth/', include('rest_framework.urls')),
-    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
+    path('api-auth/', include('rest_framework.urls')), # for browsable api login/logout
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'), # get token for registered users
 ]
 
 if settings.DEBUG:

@@ -3,16 +3,24 @@ from ads.models import Post
 from users.models import CustomUser
 
 
-# class UserSerializer(serializers.ModelSerializer):
+class RegisterUserSerializer(serializers.ModelSerializer):
 
-#     class Meta:
-#         model = CustomUser
-#         fields = ['username', 'email', 'phone', 'image']
+    class Meta:
+        model = CustomUser
+        fields = ['username', 'phone', 'email', 'password']
+
+    def create(self, validated_data):
+        password = validated_data.pop('password', None)
+        obj = self.Meta.model(**validated_data)
+        if password is not None:
+            obj.set_password(password)
+        else:
+            print('nope')
+        obj.save()
+        return obj
 
 
 class PostSerializer(serializers.ModelSerializer):
-
-    # author = UserSerializer(read_only=True)
 
     class Meta:
         model = Post
